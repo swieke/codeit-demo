@@ -41,7 +41,7 @@ def checkSalad():
             
             if (sum > maxSum and numOfShop == n): 
                 maxSum = sum
-                numSalad = maxSum
+                if (maxSum > numSalad): numSalad = maxSum
 
             i += 1;
 
