@@ -13,7 +13,7 @@ def sweep():
     logging.info("data received: {}".format(data))
 
     # Parse data
-    tests = data.get("tests")
+    tests = data["tests"]
     res = {}
 
     for key, value in tests.items():
