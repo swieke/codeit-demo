@@ -7,7 +7,7 @@ from codeitsuisse import app;
 
 logger = logging.getLogger(__name__)
 
-@app.route('/salad-spree', methods=['POST'])
+@app.route('/clean_floor', methods=['POST'])
 def checkSalad():
     data = request.get_json();
     logging.info("data received: {}".format(data))
