@@ -30,6 +30,10 @@ def sweep():
         res[key] = {
             count
         }
+
+    ans = {
+        "answers" : res
+    }
     
-    return json.dumps({"answers": res})
+    return json.dumps(ans)
 
