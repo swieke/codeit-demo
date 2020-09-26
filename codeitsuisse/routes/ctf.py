@@ -31,5 +31,5 @@ def sweep():
             count
         }
     
-    return json.dumps({"answers": "x"})
+    return json.dumps({"answers": res})
 
