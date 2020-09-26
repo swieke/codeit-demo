@@ -15,6 +15,18 @@ def predictFruit():
     logging.info("data received: {}".format(data))
     print(data)
 
+    parseIndexList = [i+1 for i in range(len(data)) if data[i] == ':']
+
+    numOfFruitA = int(data[parseIndexList[0]:parseIndexList[0]+2])
+    numOfFruitB = int(data[parseIndexList[1]:parseIndexList[1]+2])
+    numOfFruitC = int(data[parseIndexList[2]:parseIndexList[2]+2])
+
+    print(numOfFruitA)
+    print(numOfFruitB)
+    print(numOfFruitC)
+
+
+
     # Parse data
     # maApple = data.split('{ "maApple" : ');
     # maWatermelon = data.get("maWatermelon");
@@ -22,4 +34,4 @@ def predictFruit():
     # print(maApple);
 
     # prediction = maApple * 56 + maWatermelon * 23 + maBanana * 80
-    return("{}".format(150))
+    return("{}".format(2))
