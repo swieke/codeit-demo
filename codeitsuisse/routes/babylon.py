@@ -7,24 +7,18 @@ from codeitsuisse import app;
 
 logger = logging.getLogger(__name__)
 
-# {
-#     numberOfBooks: 5,
-#     numberOfDays: 3,
-#     books: [114, 111, 41, 62, 64],
-#     days: [157, 136, 130]
-# }
-
 @app.route('/olympiad-of-babylon', methods=['POST'])
 def findOptimalReading():
     data = request.get_json();
     logging.info("data received: {}".format(data))
 
     # Parse data
-    numBooks = 5
-    numDays = 3
-    books = [114, 111, 41, 62, 64]
-    days = [157, 136, 130]
+    numBooks = data.get("numberOfBooks");
+    numDays = data.get("numberOfDays");
+    books = data.get("books");
+    days = data.get("days");
 
+    # Initialization
     sumOfDaysDuration = sum(days)
     i = 0
     totalDuration = 0
@@ -39,5 +33,3 @@ def findOptimalReading():
     return json.dumps({
         "optimalNumberOfBooks" : booksRead
     })
-
-
