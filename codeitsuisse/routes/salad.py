@@ -16,18 +16,13 @@ def checkSalad():
     n = data.get("number_of_salads");
     s = data.get("salad_prices_street_map")
 
-    # base case check
-    if (n > len(s[0]) or n > 100 or len(s[0]) > 100):
-        return json.dumps({"result" : 0})
-
-    sumArr = 0
     numSalad = 0
 
     for arr in s:
         i = 0
-        maxSum = 0;
+        minSum = 0;
 
-        while(i < len(arr) - n):
+        while(i <= len(arr) - n):
             sum = 0
             numOfShop = 0
             for j in range(n):
@@ -38,13 +33,13 @@ def checkSalad():
                     
             print("SUM: {}".format(sum))
             print("NUMOFSHOP: {}".format(numOfShop))
-            
-            if (sum > maxSum and numOfShop == n): 
-                maxSum = sum
-                if (maxSum > numSalad): numSalad = maxSum
-
+            #sum > minSum and 
+            if (numOfShop == n): 
+                minSum = sum
+                if (minSum < numSalad or not numSalad): 
+                    numSalad = minSum
+    
             i += 1;
-
     res = {
         "result" : numSalad
     }
