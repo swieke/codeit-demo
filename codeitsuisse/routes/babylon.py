@@ -38,4 +38,6 @@ def findOptimalReading():
     res = {
         "optimalNumberOfBooks" : booksReadCount
     }
+    logging.info("Result: ")
+    logging.info(res)
     return json.dumps(res)
