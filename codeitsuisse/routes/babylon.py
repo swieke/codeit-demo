@@ -19,17 +19,21 @@ def findOptimalReading():
     days = data.get("days");
 
     # Initialization
-    sumOfDaysDuration = sum(days)
-    i = 0
-    totalDuration = 0
-    booksRead = 0
+    booksReadCount = 0
+    books.sort(reverse=True)
+    days.sort(reverse=True)
 
-    while (i < len(books)):
-        if (totalDuration + books[i] <= sumOfDaysDuration):
-            totalDuration += books[i]
-            booksRead += 1
-        i += 1
+    taken = []
+
+    for dayTime in days:
+        remainingTime = dayTime
+        for i in range(len(books)):
+            if (books[i] <= remainingTime and i not in taken):
+                booksReadCount += 1
+                remainingTime -= books[i]
+                taken.append(i)
+                print("Insert {} to {}, remaining {}".format(books[i], dayTime, remainingTime))
 
     return json.dumps({
-        "optimalNumberOfBooks" : booksRead
+        "optimalNumberOfBooks" : booksReadCount
     })
