@@ -31,5 +31,5 @@ def checkSalad():
             count
         }
     
-    return json.dumps({"answers": res})
+    return json.dumps({"answers": "x"})
 
