@@ -24,7 +24,7 @@ def line(p1, p2):
         C = (p1[0]*p2[1] - p2[0]*p1[1])
         return A, B, -C
 
-@app.route('/salad-spree', methods=['POST'])
+@app.route('/revisitgeometry', methods=['POST'])
 def getIntersection():
     data = request.get_json();
     logging.info("data received: {}".format(data))
