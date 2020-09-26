@@ -26,15 +26,20 @@ def checkSalad():
         while(i < len(arr) - n):
             sum = 0
             numOfShop = 0
-            for i in range(n):
-                if (arr[i] != 'X'):
+            for j in range(n):
+                if (arr[i + j] != 'X'):
                     numOfShop += 1
-                    sum += int(arr[i])
+                    sum += int(arr[i + j])
+                    # print(numOfShop)
+                    
+            print("SUM: {}".format(sum))
+            print("NUMOFSHOP: {}".format(numOfShop))
             
             if (sum > maxSum and numOfShop == n): 
                 maxSum = sum
-                
-        numSalad = maxSum
+                numSalad = maxSum
+
+            i += 1;
 
     res = {
         "result" : numSalad
