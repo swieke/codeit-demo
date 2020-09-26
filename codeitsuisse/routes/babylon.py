@@ -34,6 +34,7 @@ def findOptimalReading():
                 taken.append(i)
                 # print("Insert {} to {}, remaining {}".format(books[i], dayTime, remainingTime))
 
+    
     res = {
         "optimalNumberOfBooks" : booksReadCount
     }

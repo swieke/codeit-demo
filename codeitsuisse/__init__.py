@@ -3,6 +3,7 @@ app = Flask(__name__)
 import codeitsuisse.routes.square
 import codeitsuisse.routes.salad
 import codeitsuisse.routes.babylon
+import codeitsuisse.routes.mafrba
 
 
 
