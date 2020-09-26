@@ -11,6 +11,8 @@ logger = logging.getLogger(__name__)
 def findCluster():
 
     data = request.get_json();
+    print(data)
+    print(type(data))
     logging.info("data received: {}".format(data))
 
     grid = data
