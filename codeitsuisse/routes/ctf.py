@@ -27,9 +27,8 @@ def sweep():
             elif (i > 0 and floor[i] == 0):
                 count += 1
 
-        res[key] = {
-            count
-        }
+        res[key] = count
+        
 
     ans = {
         "answers" : res
