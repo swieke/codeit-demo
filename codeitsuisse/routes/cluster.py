@@ -8,12 +8,12 @@ from codeitsuisse import app;
 logger = logging.getLogger(__name__)
 
 @app.route('/cluster', methods=['POST'])
-def findCluster(grid):
+def findCluster():
 
-    data = request.data;
+    data = request.get_json();
     logging.info("data received: {}".format(data))
 
-    map = data
+    grid = data
 
     def dfs(grid, i, j):
         if i<0 or j<0 or i>=len(grid) or j>=len(grid[0]) or grid[i][j] == '*':
@@ -27,7 +27,7 @@ def findCluster(grid):
             dfs(grid, i, j-1)
 
     if not grid:
-        return 0
+        return json.dumps({ "answer" : 0 })
         
     count = 0
 
