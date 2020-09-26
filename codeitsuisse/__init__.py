@@ -7,6 +7,7 @@ import codeitsuisse.routes.mafrba
 import codeitsuisse.routes.ctf
 import codeitsuisse.routes.cluster
 import codeitsuisse.routes.geometry
+import codeitsuisse.routes.mafrba
 
 
 
