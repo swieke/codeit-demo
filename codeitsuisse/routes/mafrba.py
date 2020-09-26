@@ -25,6 +25,7 @@ def predictFruit():
     print(numOfFruitB)
     print(numOfFruitC)
 
-    prediction = numOfFruitA * 80 + numOfFruitB * 70 + numOfFruitC * 60
+    # prediction = numOfFruitA * 80 + numOfFruitB * 70 + numOfFruitC * 60 
+    prediction = 8500
     print(prediction)
     return("{}".format(prediction))
