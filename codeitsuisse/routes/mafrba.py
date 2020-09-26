@@ -25,13 +25,5 @@ def predictFruit():
     print(numOfFruitB)
     print(numOfFruitC)
 
-
-
-    # Parse data
-    # maApple = data.split('{ "maApple" : ');
-    # maWatermelon = data.get("maWatermelon");
-    # maBanana = data.get("maBanana");
-    # print(maApple);
-
-    # prediction = maApple * 56 + maWatermelon * 23 + maBanana * 80
-    return("{}".format(2))
+    prediction = numOfFruitA * 55 + numOfFruitB * 55 + numOfFruitC * 50
+    return("{}".format(prediction))
