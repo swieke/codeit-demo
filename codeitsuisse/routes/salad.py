@@ -16,6 +16,10 @@ def checkSalad():
     n = data.get("number_of_salads");
     s = data.get("salad_prices_street_map")
 
+    # base case check
+    if (n > len(s[0]) or n > 100 or len(s[0]) > 100):
+        return json.dumps({"result" : 0})
+
     sumArr = 0
     numSalad = 0
 
