@@ -8,7 +8,7 @@ from codeitsuisse import app;
 logger = logging.getLogger(__name__)
 
 @app.route('/clean_floor', methods=['POST'])
-def checkSalad():
+def sweep():
     data = request.get_json();
     logging.info("data received: {}".format(data))
 
